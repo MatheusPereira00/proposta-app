@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping(path = "/proposta")
+@CrossOrigin("http://localhost:4200")
 @RestController
+@RequestMapping(path = "/proposta")
 public class PropostaController {
-
 
     private final PropostaService propostaService;
 
@@ -29,7 +29,7 @@ public class PropostaController {
     @GetMapping
     public ResponseEntity<List<PropostaResponseDto>> obterProposta(){
         List<PropostaResponseDto> propostaResponseDtoList = propostaService.obterProposta();
-        return ResponseEntity.status(HttpStatus.FOUND).body(propostaResponseDtoList);
+        return ResponseEntity.ok().body(propostaResponseDtoList);
     }
 
 }
