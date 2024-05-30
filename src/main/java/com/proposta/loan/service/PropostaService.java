@@ -13,10 +13,10 @@ import java.util.List;
 @Service
 public class PropostaService {
 
-    private PropostaMapper propostaMapper;
-    private PropostaRepository propostaRepository;
-    private NotificacaoService notificacaoService;
-    private String exchange;
+    private final PropostaMapper propostaMapper;
+    private final PropostaRepository propostaRepository;
+    private final NotificacaoService notificacaoService;
+    private final String exchange;
 
     public PropostaService(PropostaMapper propostaMapper,
                            PropostaRepository propostaRepository,
